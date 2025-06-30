@@ -35,4 +35,10 @@ describe("Add", () => {
     const commaOperatorSum = Add("//,\n1,2,3");
     expect(commaOperatorSum).toBe(6);
   });
+
+  test("should throw exception for negative numbers", () => {
+    expect(() => Add("//;\n-1;2;-5")).toThrow(
+      "negative numbers not allowed -1,-5"
+    );
+  });
 });
