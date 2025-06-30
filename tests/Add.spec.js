@@ -14,4 +14,12 @@ describe("Add", () => {
     const sum = Add("");
     expect(sum).toBe(0);
   });
+
+  test("should return sum of numbers", () => {
+    const sumForSingleNumber = Add("1");
+    expect(sumForSingleNumber).toBe(1);
+
+    const sumForMultipleNumbers = Add("1,2,3");
+    expect(sumForMultipleNumbers).toBe(6);
+  });
 });
