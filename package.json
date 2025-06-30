@@ -1,4 +1,7 @@
 {
+  "name": "string-calculator",
+  "version": "1.0.0",
+  "type": "module",
   "devDependencies": {
     "jest": "^30.0.3"
   },
