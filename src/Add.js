@@ -1,5 +1,5 @@
 const getNumbersArray = (stringInput = "") => {
-  return stringInput.split(",");
+  return stringInput.split(/[\n,]/);
 };
 
 const Add = (input) => {

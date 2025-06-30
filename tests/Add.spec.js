@@ -15,11 +15,16 @@ describe("Add", () => {
     expect(sum).toBe(0);
   });
 
-  test("should return sum of numbers", () => {
+  test("should return sum of comma separated numbers", () => {
     const sumForSingleNumber = Add("1");
     expect(sumForSingleNumber).toBe(1);
 
     const sumForMultipleNumbers = Add("1,2,3");
     expect(sumForMultipleNumbers).toBe(6);
+  });
+
+  test("should return sum of comma/newline separated numbers", () => {
+    const sum = Add("1\n2,3");
+    expect(sum).toBe(6);
   });
 });
