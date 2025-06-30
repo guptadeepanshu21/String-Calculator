@@ -27,4 +27,12 @@ describe("Add", () => {
     const sum = Add("1\n2,3");
     expect(sum).toBe(6);
   });
+
+  test("should support change of operator", () => {
+    const semicolonOperatorSum = Add("//;\n1;2");
+    expect(semicolonOperatorSum).toBe(3);
+
+    const commaOperatorSum = Add("//,\n1,2,3");
+    expect(commaOperatorSum).toBe(6);
+  });
 });
